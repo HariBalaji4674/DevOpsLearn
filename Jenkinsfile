@@ -18,6 +18,14 @@ pipeline {
             }
 
         }
+        stage('example') {
+            environment {
+                AUTH = credentials('ssh-auth')
+            }
+            steps{
+                sh 'printenv'
+            }
+        }
         stage ('plan'){
             steps {
                 sh '''
