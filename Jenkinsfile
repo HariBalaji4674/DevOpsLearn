@@ -13,7 +13,6 @@ pipeline {
                 sh ''' 
                 ls -ltr
                 pwd
-                
                 '''
             }
 
@@ -35,11 +34,11 @@ pipeline {
                '''
             }
         }
-        stage('Approve') {
-            steps {
-                input "Please Approve the Request?"
-            }
-        }
+        // stage('Approve') {
+        //     steps {
+        //         input "Please Approve the Request?"
+        //     }
+        // }
     }
     post {
         always {
