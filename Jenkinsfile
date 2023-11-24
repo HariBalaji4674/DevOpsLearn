@@ -2,7 +2,7 @@ pipeline {
     agent {node {label 'agent1' }}
     options {
         ansiColor('xterm')
-        timeout (time: 1, unit: 'HOURS')
+        timeout (time: 1, unit: 'MINUTES')
     }
     environment{
         USER = 'peddireddy'
@@ -13,12 +13,12 @@ pipeline {
                 sh ''' 
                 ls -ltr
                 pwd
-                print(env)
+                
                 '''
             }
 
         }
-        stage ('paln'){
+        stage ('plan'){
             steps {
                 sh '''
                ls- ltr
