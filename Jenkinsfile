@@ -11,8 +11,7 @@ pipeline {
         stage('Init'){
             steps{
                 sh ''' 
-                ls -ltr
-                pwd
+                echo "Initiating"
                 '''
             }
 
@@ -22,15 +21,13 @@ pipeline {
                 AUTH = credentials('ssh-auth')
             }
             steps{
-                sh 'printenv'
+                sh "printenv" 
             }
         }
         stage ('plan'){
             steps {
                 sh '''
-               ls- ltr
-               cd etc 
-               ls -ltr
+                  echo "planning" 
                '''
             }
         }
